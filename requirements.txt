@@ -7,5 +7,5 @@ import skimage
 
 numpy
 scipy
-scikit-image # type: ignore
+scikit-image >= 0.16.1 # type: ignore
 matplotlib
