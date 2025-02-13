@@ -1,0 +1,72 @@
+Módulo vs Pacote
+
+Módulo: objeto que serve como unidade organizacional do código que é carregado pelo comando de importy.
+Pacote: coleção de módulos com hierarquia.
+
+Modularização
+Vantagens da modularização:
+- Legibilidade
+- Manutenção
+- Reaproveitamento de código
+
+Pacote em Python
+Vantagens de criar um pacote:
+Facilidade de compartilhamento
+Facilidade de instalação
+
+Conceitos:
+- Pypi: repositório público oficial de pacotes em Python
+- Wheel e Sdist: dois tipos de distribuições
+- Setuptools: pacote usado em setup.py para gerar as distribuições
+- Twine: pacotes usado para subir as distribuições no repositório Pypi.
+
+Parte 2: Criar o projeto e gerar as distribuições
+Descomplicando a criação de pecotes em Python
+
+Arquivo de requirements.txt
+Usando para passar as dependências que devem ser instaldas com o seu pcaote. Opcionalmente, podem ser especficadas as versões.
+
+Parte 4
+Arquivo setup.py
+Usado para especificar como o pacote deve ser contrído.
+Documentação: https://setuptools.readthedocs.io/en/latest/setuptool.html
+
+
+Arquivo README.md
+
+Distribuições
+Para subir o pacote, criar uma distribuição binária ou distribuição de código fonte.
+As versões mais recentes do pip instalam primeiramente a binária e usam a distribuição de código fonte, apenas se necessário.
+De qualquer forma, iremos criar ambas distribuições.
+
+Comandos de instalação
+python -m pip install --upgrade pip
+python -m pip install --user twine
+python -m pip install --user setuptools
+
+
+Comandos para criar distribuições
+python setup.py sdist bdist_wheel
+
+Passos para subir o pacote  
+1. Criar conta no Test Pypi
+2. Publicar no Test Pypi
+3. Instalar o pacote usando Test Pypi
+4. Testar pacote
+5. Criar conta no Pypi
+6. Publicar no Pypi
+7. Instalar pacote usando Pypi
+
+Criando contas no Pypi
+https://pypi.org/account/register/
+https://test.pypi.org/account/register/
+
+Comando para publicar no Test Pypi
+python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+Comando para publicar no Pypi  
+pip install image-processing
+
+Comando para instalar o pacote  
+python -m pip install package_name
+
