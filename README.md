@@ -1,5 +1,13 @@
 # package_name
 
+Ativa o ambiente virtual do Python no windowns:  
+No terminal do VS Code, execute os seguintes comandos:
+2. **Criar o ambiente virtual e ativá-lo:**
+````  
+python -m venv .env
+.\.env\Scripts\activate
+````
+
 Description. 
 The package package_name is used to:
 	- 
